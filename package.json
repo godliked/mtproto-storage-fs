@@ -1,0 +1,46 @@
+{
+  "name": "mtproto-storage-fs",
+  "version": "0.3.1",
+  "description": "Save telegram-mtproto session into plain json file",
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "watch:cjs": "npm run build:cjs -- --watch",
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "cross-env BABEL_ENV=commonjs babel src/ -d lib -s --ignore __test__",
+    "build:es": "babel src/ -d es -s --ignore __test__",
+    "clean": "rimraf lib/ && rimraf es/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "types": "flow-copy-source src lib && flow-copy-source src es",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "files": [
+    "lib",
+    "src",
+    "es",
+    "README.md"
+  ],
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "fs-extra": "^4.0.2",
+    "mtproto-logger": "^0.1.9",
+    "mtproto-shared": "^0.1.8"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^4.0.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cross-env": "^5.0.5",
+
+    "flow-copy-source": "^1.2.1",
+    "rimraf": "^2.6.2"
+  },
+  "author": "Zero Bias",
+  "license": "MIT"
+}

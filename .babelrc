@@ -1,0 +1,17 @@
+{
+  "presets": [
+  ],
+  "plugins": [
+    "transform-flow-strip-types",
+    "transform-class-properties",
+    "transform-async-to-generator",
+    ["transform-object-rest-spread", { "useBuiltIns": true }]
+  ],
+  "env": {
+    "commonjs": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
