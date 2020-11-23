@@ -11,3 +11,8 @@ $ npm install --save mtproto-storage-fs
 
 [npm-image]: https://badge.fury.io/js/mtproto-storage-fs.svg
 [npm-url]: https://www.npmjs.org/package/mtproto-storage-fs
+
+
+**Authored By [@zerobias]( https://github.com/zerobias )**
+
+**Updated By [@godliked]( https://github.com/godliked )**
